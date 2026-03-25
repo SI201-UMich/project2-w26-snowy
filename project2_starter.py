@@ -276,6 +276,22 @@ def validate_policy_numbers(data) -> list[str]:
     # ==============================
     # YOUR CODE STARTS HERE
     # ==============================
+    invaild = []
+
+    key1 = re.compile(r"20\d{2}-00\d{4}STR$")
+    key2 = re.compile(r"STR-\d{7}$")
+
+    for row in data:
+        listing_id = row[1]
+        policy_num = row[2]
+
+        if policy_num in ["Pending", "Exempt"]:
+            continue
+
+        if not (key1.match(policy_num) or key2.match(policy_num)):
+            invaild.append(listing_id)
+    return invaild
+
     pass
     # ==============================
     # YOUR CODE ENDS HERE
