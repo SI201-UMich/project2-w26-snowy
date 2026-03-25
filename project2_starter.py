@@ -4,10 +4,10 @@
 # Your email: snowysli@umich.edu
 # Who or what you worked with on this homework (including generative AI like ChatGPT): Chatgpt
 # If you worked with generative AI also add a statement for how you used it.
-# e.g.:
+# e.g.: I asked ChatGPT what each function was suppose to do, debugging, code structure 
 # Asked ChatGPT for hints on debugging and for suggestions on overall code structure
 #
-# Did your use of GenAI on this assignment align with your goals and guidelines in your Gen AI contract? If not, why?
+# Did your use of GenAI on this assignment align with your goals and guidelines in your Gen AI contract? If not, why? Yes
 #
 # --- ARGUMENTS & EXPECTED RETURN VALUES PROVIDED --- #
 # --- SEE INSTRUCTIONS FOR FULL DETAILS ON METHOD IMPLEMENTATION --- #
@@ -87,7 +87,64 @@ def get_listing_details(listing_id) -> dict:
     # ==============================
     # YOUR CODE STARTS HERE
     # ==============================
+    file = f"html_files/listing_{listing_id}.html"
 
+    with open(file, "r") as f:
+        soup = BeautifulSoup(f, "html.parser")
+
+    listing = {}
+    text = soup.get_text()
+
+
+    policy_number = ""
+
+    policy_number_key = re.search(r"(20\d{2}-00\d{4}STR|STR-\d{7})", text)
+
+    if policy_number_key:
+        policy_number = policy_number_key.group()
+    else:
+        policy_number = "Exempt"
+    
+    host_type = ""
+    if "Superhost" in text:
+        host_type = "Superhost"
+    else:
+        host_type = "regular"
+    
+    host_name = ""
+    section = soup.find("h2")
+    if section:
+        host_name = section.get_text(strip = True).replace("Hosted by ", "")
+
+    #room_type
+    room_type = ""
+    tag = soup.find("h1")
+
+    if tag:
+        room_type = tag.get_text()
+    
+    if "Private" in tag:
+        room_type = "Private Room"
+    elif "Shared" in tag:
+        room_type = "Shared Room"
+    else:
+        room_type = "Entire Room"
+
+    location_rating = 0.0
+    location_rating_key = re.search(r"Location\s*([\d.]+)", text)
+
+    if location_rating_key:
+        location_rating = float(location_rating_key.group(1))
+
+    listing[listing_id] = {
+        "policy_number": policy_number,
+        "host_type": host_type,
+        "host_name": host_name,
+        "room_type": room_type,
+        "location_rating": location_rating
+    }
+
+    return listing
     pass
     # ==============================
     # YOUR CODE ENDS HERE
@@ -124,7 +181,7 @@ def create_listing_database(html_path) -> list[tuple]:
             )
         
         data.append(row)
-        
+
     return data
     pass
     # ==============================
