@@ -58,7 +58,7 @@ def load_listing_results(html_path) -> list[tuple]:
             if title:
                 result.append((title, id))
     return result
-    pass
+
     # ==============================
     # YOUR CODE ENDS HERE
     # ==============================
@@ -145,7 +145,7 @@ def get_listing_details(listing_id) -> dict:
     }
 
     return listing
-    pass
+
     # ==============================
     # YOUR CODE ENDS HERE
     # ==============================
@@ -183,7 +183,7 @@ def create_listing_database(html_path) -> list[tuple]:
         data.append(row)
 
     return data
-    pass
+
     # ==============================
     # YOUR CODE ENDS HERE
     # ==============================
@@ -214,7 +214,7 @@ def output_csv(data, filename) -> None:
                          ])
     for row in sorted_data:
         writer.writerow(row)
-    pass
+
     # ==============================
     # YOUR CODE ENDS HERE
     # ==============================
