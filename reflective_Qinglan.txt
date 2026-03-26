@@ -1,1 +1,3 @@
-I have no idea what is going on
+I think the current system is inadequate because it doesn't include the ability for real-time reportings. It also doesn't include the unregistested properties for some hosts. 
+
+A key factor is whether site owner authorizes the access. Under CFAA, scraping a website without authorization is considered unauthorized access and leads to legal consequences.
