@@ -3,9 +3,7 @@ Without real-time data sharing between the platform and the city, it makes it di
 accountability and fairness to the system. Something that can be improved is that the city could require platforms to provide real-time listing data and strengthen the enforcement 
 mechanisms to make sure that all properties are properly registered. 
 
-I think the current system is inadequate because it doesn't include the ability for real-time reportings. It also doesn't include the unregistested properties for some hosts. 
-
-A key factor is whether site owner authorizes the access. Under CFAA, scraping a website without authorization is considered unauthorized access and leads to legal consequences.
+Something that is important when web scraping is if the site owner authorizes the access. Under CFAA, scraping a website without authorization is considered unauthorized access and leads to legal consequences. This is important because, even though the data is publicly accessible, this doesn't mean it doesn't violate the terms of service, and bypassing restrictions can still lead to creating legal risk. Because of this, developers has to consider if they have permission to web scrape even if the data is publicly accessible.
 
 1. Don't scrape personal data that people don't want public.
 2. Scrape data for beneficial uses.
