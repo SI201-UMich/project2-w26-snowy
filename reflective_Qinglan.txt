@@ -3,7 +3,12 @@ Without real-time data sharing between the platform and the city, it makes it di
 accountability and fairness to the system. Something that can be improved is that the city could require platforms to provide real-time listing data and strengthen the enforcement 
 mechanisms to make sure that all properties are properly registered. 
 
-Something that is important when web scraping is if the site owner authorizes the access. Under CFAA, scraping a website without authorization is considered unauthorized access and leads to legal consequences. This is important because, even though the data is publicly accessible, this doesn't mean it doesn't violate the terms of service, and bypassing restrictions can still lead to creating legal risk. Because of this, developers has to consider if they have permission to web scrape even if the data is publicly accessible.
+Something that is important when web scraping is if the site owner authorizes the access. Under CFAA, scraping a website without authorization is considered unauthorized access and
+leads to legal consequences. This is important because, even though the data is publicly accessible, this doesn't mean it doesn't violate the terms of service, and bypassing
+restrictions can still lead to creating legal risk. Because of this, developers has to consider if they have permission to web scrape even if the data is publicly accessible.
 
 1. Don't scrape personal data that people don't want public.
 2. Scrape data for beneficial uses.
+When a person decides if they should web scrape a data, they should consider if it's personal data that people don't want released publicly, and if it's for beneficial use. Avoid
+scraping personal data that a person don't want public, this is to respect privacy and prevent harm. Also when considering web scraping, they should consider if it's for a good 
+use, since there is a lot of data out there and not all should be used for exploitation.
