@@ -1,4 +1,7 @@
-The current system for regulating short-term rentals is inadequate. This is because it lacks real-time repotings and fails to fully take into accound for unregistered properties. Without real-time data sharing between the platform and the city, it makes it difficult to keep an eye on violations, allowing some to bypass the rules and reduce overall accountability and fairness to the system. Something that can be improved is that the city could require platforms to provide real-time listing data and strengthen the enforcement mechanisms to make sure that all properties are properly registered. 
+The current system for regulating short-term rentals is inadequate. This is because it lacks real-time repotings and fails to fully take into accound for unregistered properties.
+Without real-time data sharing between the platform and the city, it makes it difficult to keep an eye on violations, allowing some to bypass the rules and reduce overall
+accountability and fairness to the system. Something that can be improved is that the city could require platforms to provide real-time listing data and strengthen the enforcement 
+mechanisms to make sure that all properties are properly registered. 
 
 I think the current system is inadequate because it doesn't include the ability for real-time reportings. It also doesn't include the unregistested properties for some hosts. 
 
